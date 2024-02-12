@@ -49,22 +49,20 @@ main {
   margin: 0 auto;
 }
 
+.dsf-mb10 {
+  margin-bottom: 10px;
+}
+
 .dsf-mb20 {
   margin-bottom: 20px;
 }
 
+.dsf-mt10 {
+  margin-top: 10px;
+}
+
 .dsf-mt20 {
   margin-top: 20px;
-}
-
-.dsf-section-title {
-  text-align: center;
-  color: var(--dsc-color-font-primary);
-  font-size: 16px;
-}
-
-.dsf-txt-left {
-  text-align: left;
 }
 
 /*-----------------------------------------------------------------*/
@@ -78,21 +76,12 @@ main {
 }
 
 /*-----------------------------------------------------------------*/
-/* header styles */
-
-
-
-/*-----------------------------------------------------------------*/
 /* card styles */
 
-.dsc-card {
+.dsf-card {
   border: 1px solid var(--dsc-color-card-border);
   border-radius: 4px;
   background-color: var(--dsc-color-card-bg);
-}
-
-.dsc-line-bottom {
-  border-bottom: 1px solid var(--dsc-color-card-border);
 }
 
 /*-----------------------------------------------------------------*/

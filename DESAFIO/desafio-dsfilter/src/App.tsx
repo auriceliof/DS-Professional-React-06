@@ -1,11 +1,12 @@
 import "./index.css";
 import Header from "./components/Header/Index";
+import ListingBody from "./routes/ListingBody";
 
 function App() {
   return (
     <div>
       <Header />
-      <h1>DESAFIO DSFILTER</h1>
+      <ListingBody />
     </div>
   );
 }

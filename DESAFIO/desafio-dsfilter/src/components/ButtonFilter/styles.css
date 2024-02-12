@@ -1,0 +1,9 @@
+.dsf-button {
+    width: 200px;
+    height: 40px;
+    background-color: var(--dsc-color-btn-primary);
+    color: var(--dsc-color-font-primary);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}

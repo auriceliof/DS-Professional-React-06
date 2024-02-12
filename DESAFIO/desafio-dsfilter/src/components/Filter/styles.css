@@ -1,0 +1,22 @@
+.dsf-card-filter {
+    background-color: var(--dsc-color-bg-secondary);
+    border: 1px solid var(--dsc-color-filter-border);
+    border-radius: 5px;
+    height: 200px;
+    padding: 15px;
+  }
+
+  .dsf-card-filter input {
+    border: 1px solid var(--dsc-color-filter-border);
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .dsf-card-filter input::placeholder {
+    color: var(--dsc-color-font-placeholder);
+    font-size: 16px;
+  }
+  
