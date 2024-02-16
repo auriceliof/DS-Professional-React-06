@@ -1,40 +1,16 @@
-import { ProductDTO } from "../../models/product";
+import { getProduct } from "../../services/product-service";
 import "./styles.css";
 
-export type Props = {
-  products: ProductDTO;
-}
+export default function Listing() {
 
-export default function Listing({products}: Props) {
+  let productId = 2; 
+  let prod = getProduct(productId);
+
   return (
     <div className="dsf-listing dsf-mb10">
       <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item  dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
-      </div>
-      <div className="dsf-item dsf-mb10">
-        <p>{products.name}</p>
-        <h3>R$ {products.price.toFixed(2)}</h3>  
+        <p>{prod?.name}</p>
+        <h3>{prod?.price}</h3>
       </div>
     </div>
   );

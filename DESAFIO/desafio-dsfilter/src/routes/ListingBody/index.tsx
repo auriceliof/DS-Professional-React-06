@@ -1,12 +1,5 @@
 import Filter from "../../components/Filter";
 import Listing from "../../components/Listing";
-import { ProductDTO } from "../../models/product";
-
-const products: ProductDTO = {
-    id: 1,
-    name: "The Lord of the Rings",
-    price: 90.5,
-  }
 
 export default function ListingBody() {
   return (
@@ -16,7 +9,7 @@ export default function ListingBody() {
           <Filter />
         </div>
         <div className="dsf-mb20">
-          <Listing products = {products} />
+          <Listing />
         </div>
       </div>
     </section>
