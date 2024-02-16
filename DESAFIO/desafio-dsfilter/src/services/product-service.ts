@@ -77,7 +77,6 @@ import { ProductDTO } from "../models/product";
   export function getAllProduct(): ProductDTO[] {
     return products;
   }
-    
 
   export function getProductId(id: number){
     return products.find(x => x.id === id);
