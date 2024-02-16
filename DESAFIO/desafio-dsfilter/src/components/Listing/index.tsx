@@ -1,17 +1,32 @@
-import { getProduct } from "../../services/product-service";
 import "./styles.css";
+import { useEffect, useState } from 'react';
+import { getAllProduct } from "../../services/product-service";
+import { ProductDTO } from '../../models/product';
 
 export default function Listing() {
+ 
+  const [allProducts, setAllProducts] = useState<ProductDTO[]>([]);
 
-  let productId = 2; 
-  let prod = getProduct(productId);
+  useEffect(() => {
+    const fetchData = async () => {
+
+      const products = await getAllProduct();
+      setAllProducts(products);
+     
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="dsf-listing dsf-mb10">
-      <div className="dsf-item  dsf-mb10">
-        <p>{prod?.name}</p>
-        <h3>{prod?.price}</h3>
-      </div>
+      {
+        allProducts.map(product => (
+          <div key={product.id} className="dsf-item  dsf-mb10">
+            <p>{product.name}</p>
+            <h3>{product.price}</h3>
+          </div>
+        ))
+      }
     </div>
   );
 }
