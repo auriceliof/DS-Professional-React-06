@@ -1,7 +1,9 @@
+import './styles.css';
 import { useEffect, useState } from "react";
-import Filter from "../../components/Filter";
 import { findByPrice } from "../../services/product-service";
 import { ProductDTO } from "../../models/product";
+import Filter from "../../components/Filter";
+import Listing from "../../components/Listing";
 
 export default function ListingBody() {
   const [findProducts, setFindProducts] = useState<ProductDTO[]>([]);
@@ -30,11 +32,10 @@ export default function ListingBody() {
           <Filter onFilter={handleFilter}/>
         </div>
         <div className="dsf-mb20">
-          <div className="dsf-listing dsf-mb10">
-            {findProducts.map((product) => (
-              <div key={product.id} className="dsf-item  dsf-mb10">
-                <p>{product.name}</p>
-                <h3>R$ {product.price.toFixed(2)}</h3>
+          <div className="dsf-listingBody dsf-mb10">
+            {findProducts.map( product => (
+              <div  className="dsf-listingBody-item  dsf-mb10">
+                <Listing key={product.id} product={product} />
               </div>
             ))}
           </div>

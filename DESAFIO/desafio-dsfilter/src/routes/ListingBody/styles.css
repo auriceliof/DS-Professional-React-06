@@ -1,0 +1,13 @@
+.dsf-listingBody {
+    background-color: var(--dsc-color-bg-secondary);
+    border: 1px solid var(--dsc-color-filter-border);
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .dsf-listingBody-item {
+    border: 1px solid var(--dsc-color-listing-border);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  

@@ -1,29 +1,9 @@
-.dsf-listing {
-    background-color: var(--dsc-color-bg-secondary);
-    border: 1px solid var(--dsc-color-filter-border);
-    border-radius: 5px;
-    padding: 15px;
-  }
-
-  .dsf-listing {
-    background-color: var(--dsc-color-bg-secondary);
-    border: 1px solid var(--dsc-color-filter-border);
-    border-radius: 5px;
-    padding: 15px;
-  }
-  
-  .dsf-item {
-    border: 1px solid var(--dsc-color-listing-border);
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .dsf-item h3 {
+  .dsf-listing-item h3 {
     color: var(--dsc-color-font-secondary);
     font-size: 16px;
   }
   
-  .dsf-item p {
+  .dsf-listing-item p {
     color: var(--dsc-color-font-tertiary);
     font-size: 12px;
   }
