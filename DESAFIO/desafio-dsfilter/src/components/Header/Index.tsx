@@ -1,6 +1,11 @@
 import './styles.css';
+import * as productService from '../../services/product-service';
+import { useState } from 'react';
 
 export default function Header() {
+
+  const [prod] = useState(productService.getAllProduct());
+
   return (
     <header className="dsf-header">
       <nav className="dsf-container">
@@ -8,7 +13,7 @@ export default function Header() {
           <h1>DSFilter</h1>
         </div>
         <div>
-            <p>6 produto(s)</p>
+            <p>{prod.length} produto(s)</p>
         </div>
       </nav>
     </header>
