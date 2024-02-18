@@ -34,8 +34,8 @@ export default function ListingBody() {
         <div className="dsf-mb20">
           <div className="dsf-listingBody dsf-mb10">
             {findProducts.map( product => (
-              <div  className="dsf-listingBody-item  dsf-mb10">
-                <Listing key={product.id} product={product} />
+              <div key={product.id} className="dsf-listingBody-item  dsf-mb10">
+                <Listing product={product} />
               </div>
             ))}
           </div>
