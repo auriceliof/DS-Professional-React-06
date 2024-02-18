@@ -7,15 +7,19 @@ export default function Listing() {
  
   const [findProducts, setFindProducts] = useState<ProductDTO[]>([]);
 
+  const [minPrice, setMinPrice] = useState(1500);
+
+  const [maxPrice, setMaxPrice] = useState(2000);
+
   useEffect(() => {
     const fetchData = async () => {
 
-      const products = await findByPrice(1500, 2000);
+      const products = await findByPrice(minPrice, maxPrice);
       setFindProducts(products);
      
     };
     fetchData();
-  }, []);
+  }, [minPrice, maxPrice]);
 
   return (
     <div className="dsf-listing dsf-mb10">
