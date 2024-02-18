@@ -32,7 +32,7 @@ export default function Filter({onFilter}: Props) {
   }
 
   return (
-    <form className="dsf-card-filter" onSubmit={handleSubmit}>
+    <form className="dsf-card-filter active" onSubmit={handleSubmit}>
       <div >
         <div >
           <input

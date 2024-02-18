@@ -13,10 +13,11 @@
     width: 200px;
     margin-bottom: 20px;
     padding: 10px;
+    outline: none;
+    border: inset;
   }
 
   .dsf-card-filter input::placeholder {
     color: var(--dsc-color-font-placeholder);
     font-size: 16px;
   }
-  
