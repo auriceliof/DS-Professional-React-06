@@ -1,19 +1,19 @@
 import './styles.css';
-import * as productService from '../../services/product-service';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { ContextProdCount } from '../../utils/context-prod';
 
 export default function Header() {
 
-  const [prod] = useState(productService.getAllProduct());
+  const { contextProdCount } = useContext(ContextProdCount);
 
   return (
     <header className="dsf-header">
       <nav className="dsf-container">
         <div>
           <h1>DSFilter</h1>
-        </div>
+        </div>  
         <div>
-            <p>{prod.length} produto(s)</p>
+            <p>{contextProdCount} produto(s)</p>            
         </div>
       </nav>
     </header>

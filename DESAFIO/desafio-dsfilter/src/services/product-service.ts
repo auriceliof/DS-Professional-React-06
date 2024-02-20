@@ -73,11 +73,3 @@ import { ProductDTO } from "../models/product";
       .filter((x) => x.price >= min && x.price <= max)
       .sort((x, y) => x.price - y.price);
   }
-
-  export function getAllProduct(): ProductDTO[] {
-    return products;
-  }
-
-  export function getProductId(id: number){
-    return products.find(x => x.id === id);
-  }

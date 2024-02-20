@@ -2,6 +2,8 @@ import { useState } from "react";
 import ButtonFilter from "../ButtonFilter";
 import "./styles.css";
 
+
+
 type Props = {
   onFilter: Function;
 }
@@ -26,8 +28,8 @@ export default function Filter({onFilter}: Props) {
     setMax({value});
   }
 
-  function handleSubmit() {
-    event?.preventDefault();
+  function handleSubmit(event : any) {
+    event.preventDefault();
     onFilter(min.value || 0, max.value || Number.MAX_VALUE)
   }
 
@@ -52,7 +54,9 @@ export default function Filter({onFilter}: Props) {
             onChange={handleChangeMax}
           />
         </div>
-        <ButtonFilter />
+        <div>
+          <ButtonFilter name="Filter"/>
+        </div>
       </div>
     </form>
   );

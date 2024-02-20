@@ -1,11 +1,14 @@
 import './styles.css';
 
-export default function(){
+type Props = {
+    name: string;
+}
+export default function({name} : Props){
     return(
         <button 
             type="submit"
             className="dsf-button">
-                Filtrar
+                {name}
         </button>
     );
 }
